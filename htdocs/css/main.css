@@ -1,59 +1,96 @@
-html {
-	width: 100%;
-	height: 100%;
-	margin: 0px;
-	background: url(../media/pagebackground.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+body {
 
 }
-html, body {
-    margin: 0;
-    padding: 0px;
-		height: 100%;
+.flex-container {
+  display: -webkit-flex;
+  display: flex; /* or inline-flex */
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  text-align: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: baseline;
+  align-items: baseline;
 }
-
-.page {
-		margin: 0;
-		padding: 0px 0;
-    height: 100%;
-    position: relative;
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
 }
-
-#selections {
-		padding: 0px 0;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+.selectionContainer {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 1;
 }
-table, th, td {
-  border: 1px solid black;
-	background-color: #D8B18A;
+header {
+  background: black;
+  color:white;
+  padding: 0;
 }
-table {
-	width: 352px;
-	margin-left: auto;
-  margin-right: auto;
+#headerbar {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-th {
-	vertical-align: middle;
-	height: 100px;
-	width: 200px;
+#logo {
+  display: inline-block;
+  margin: 0 5px;
 }
-#sitepic {
-	text-align: center;
-	vertical-align: middle;
-	height: 150px;
-	line-height:175px;
-	padding: 5px;
+#headertitle_text {
+  padding: 10% 0px;
+  font-size: 24px;
 }
-td {
-	text-align: center;
-	vertical-align: center;
-	width: 200px;
+#developing_div {
+  order: 1;
+  align-content: center;
+  width: 200px;
+  height: 200px;
+}
+#developing_link {
+  display: block;
+  z-index: 1;
+}
+#blog_div {
+  order: 2;
+  align-content: center;
+  width: 200px;
+  height: 200px;
+}
+#blog_link {
+  display: block;
+  z-index: 1;
+}
+#uploads_div {
+  order: 3;
+  align-content: center;
+  width: 200px;
+  height: 200px;
+}
+#uploads_link {
+  display: block;
+  z-index: 1;
+}
+#dev_logo, #blog_logo, #uploads_logo {
+  z-index: -1;
+  pointer-events: none;
+  width: 100px;
+  height: 100px;
+}
+footer {
+  order: 4;
+  background: #aaa;
+  color:white;
+}
+@media only screen and (max-width: 423px) {
+  #logo {
+    float: none;
+  }
+  #headerbar {
+    float: none;
+  }
+  #headertitle_text {
+    padding: 0 0px;
+  }
 }
