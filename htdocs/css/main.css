@@ -72,12 +72,6 @@ header {
   display: block;
   z-index: 1;
 }
-#dev_logo, #blog_logo, #uploads_logo {
-  z-index: -1;
-  pointer-events: none;
-  width: 100px;
-  height: 100px;
-}
 footer {
   order: 4;
   background: #aaa;
